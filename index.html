@@ -17,15 +17,15 @@
             data = loadJSON("https://raw.githubusercontent.com/vlecrz/dnm4/main/img.json");
          }
 
-         function setup() {
+         function setup() {          //cdo toma un json lo trata como objeto, entonces hay que hacer un ajuste pa que sea un arreglo
             noCanvas();
             fotos = Object.values(data);
             baraja = fotos.sort(function () {
                return 0.5 - Math.random();
             });
-            var escoge = baraja.slice(0, 4);
+            var escoge = baraja.slice(0, 4); //slice corta un arreglo desde dde le indique hasta dde le indique sin incluirlo
             console.log(escoge);
-            escoge.forEach((e) => createDiv('<a href="page.html?esta=' + e.slice(-10) + '"><img src="' + e + '"></a>').parent("#aqui"));
+            escoge.forEach((e) => createDiv('<a href="page.html?esta=' + e.slice(-14) + '"><img src="' + e + '"></a>').parent("#aqui")); //logica del nombre con el slice
          }
       </script>
    </body>
