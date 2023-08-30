@@ -29,11 +29,11 @@
             select("#cargando").addClass("esconde");
             console.log(results);
             results.forEach(r => {
-               stroke(0,255,0,200);
+               stroke(0,0,255,200);
                strokeWeight(5);
-               noFill();
-               rect(r.x,r.y,r.width,r.height);
-               noStroke();
+               fill(255,255,255,25);
+               rect(r.x,r.y,r.width,r.height); //construye el rectanglo q indica aqu ta el objeto
+               noStroke(); 
                fill(0,255,0,245);
                textSize(24);
                text(r.label,  r.x+10, r.y+25);
